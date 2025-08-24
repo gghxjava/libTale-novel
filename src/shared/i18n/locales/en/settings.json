@@ -1,0 +1,17 @@
+{
+  "title": "Settings",
+  "language": "Language",
+  "theme": "Theme",
+  "themeName": "Theme Name",
+  "currentTheme": "Current Theme",
+  "autoSwitch": "Auto Switch",
+  "systemPreference": "Follow System",
+  "font": "Font",
+  "fontSize": "Font Size",
+  "lineHeight": "Line Height",
+  "pageWidth": "Page Width",
+  "autoSave": "Auto Save",
+  "sync": "Sync Settings",
+  "about": "About",
+  "version": "Version {{version}}"
+}

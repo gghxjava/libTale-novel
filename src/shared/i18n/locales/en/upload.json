@@ -1,0 +1,11 @@
+{
+  "title": "Upload Book",
+  "dragDrop": "Drag and drop files here, or click to select",
+  "supportedFormats": "Supported formats: PDF, TXT, EPUB",
+  "maxSize": "Maximum file size: 100MB",
+  "processing": "Processing...",
+  "success": "Upload successful",
+  "error": "Upload failed",
+  "fileTooLarge": "File too large",
+  "unsupportedFormat": "Unsupported file format"
+}

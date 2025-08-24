@@ -1,0 +1,17 @@
+{
+  "title": "设置",
+  "language": "语言",
+  "theme": "主题",
+  "themeName": "主题名称",
+  "currentTheme": "当前主题",
+  "autoSwitch": "自动切换",
+  "systemPreference": "跟随系统",
+  "font": "字体",
+  "fontSize": "字体大小",
+  "lineHeight": "行高",
+  "pageWidth": "页面宽度",
+  "autoSave": "自动保存",
+  "sync": "同步设置",
+  "about": "关于",
+  "version": "版本 {{version}}"
+}

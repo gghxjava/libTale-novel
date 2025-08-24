@@ -1,0 +1,18 @@
+{
+  "title": "阅读器",
+  "pageInfo": "第 {{current}} 页，共 {{total}} 页",
+  "progress": "阅读进度 {{percent}}%",
+  "fontSize": "字体大小",
+  "lineHeight": "行高",
+  "theme": "主题",
+  "light": "浅色",
+  "dark": "深色",
+  "sepia": "护眼",
+  "bookmark": "书签",
+  "addBookmark": "添加书签",
+  "bookmarks": "书签列表",
+  "notes": "笔记",
+  "addNote": "添加笔记",
+  "fullscreen": "全屏",
+  "exitFullscreen": "退出全屏"
+}

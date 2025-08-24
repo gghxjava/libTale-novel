@@ -1,0 +1,11 @@
+{
+  "title": "上传书籍",
+  "dragDrop": "拖拽文件到这里，或点击选择",
+  "supportedFormats": "支持格式：PDF、TXT、EPUB",
+  "maxSize": "最大文件大小：100MB",
+  "processing": "处理中...",
+  "success": "上传成功",
+  "error": "上传失败",
+  "fileTooLarge": "文件过大",
+  "unsupportedFormat": "不支持的文件格式"
+}

@@ -1,0 +1,9 @@
+{
+  "light": "Light Theme",
+  "dark": "Dark Theme",
+  "sepia": "Sepia Theme",
+  "blue": "Blue Theme",
+  "green": "Green Theme",
+  "auto": "Auto Theme",
+  "system": "System Theme"
+}

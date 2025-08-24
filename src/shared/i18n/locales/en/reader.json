@@ -1,0 +1,18 @@
+{
+  "title": "Reader",
+  "pageInfo": "Page {{current}} of {{total}}",
+  "progress": "Reading Progress {{percent}}%",
+  "fontSize": "Font Size",
+  "lineHeight": "Line Height",
+  "theme": "Theme",
+  "light": "Light",
+  "dark": "Dark",
+  "sepia": "Sepia",
+  "bookmark": "Bookmark",
+  "addBookmark": "Add Bookmark",
+  "bookmarks": "Bookmarks",
+  "notes": "Notes",
+  "addNote": "Add Note",
+  "fullscreen": "Fullscreen",
+  "exitFullscreen": "Exit Fullscreen"
+}

@@ -1,0 +1,12 @@
+{
+  "title": "Title",
+  "author": "Author",
+  "fileSize": "File Size",
+  "uploadTime": "Upload Time",
+  "lastRead": "Last Read",
+  "readingProgress": "Reading Progress",
+  "totalPages": "Total Pages",
+  "currentPage": "Current Page",
+  "tags": "Tags",
+  "description": "Description"
+}

@@ -1,0 +1,15 @@
+{
+  "title": "My Library",
+  "uploadBook": "Upload Book",
+  "noBooks": "No books yet",
+  "addFirstBook": "Add your first book",
+  "bookCount": "{{count}} books",
+  "recentRead": "Recently Read",
+  "allBooks": "All Books",
+  "favorites": "Favorites",
+  "searchPlaceholder": "Search books or authors...",
+  "sortBy": "Sort by",
+  "sortByName": "Name",
+  "sortByDate": "Date",
+  "sortByProgress": "Progress"
+}

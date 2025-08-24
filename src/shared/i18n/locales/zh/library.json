@@ -1,0 +1,15 @@
+{
+  "title": "我的书库",
+  "uploadBook": "上传书籍",
+  "noBooks": "暂无书籍",
+  "addFirstBook": "添加你的第一本书",
+  "bookCount": "{{count}} 本书",
+  "recentRead": "最近阅读",
+  "allBooks": "全部书籍",
+  "favorites": "收藏",
+  "searchPlaceholder": "搜索书籍或作者...",
+  "sortBy": "排序方式",
+  "sortByName": "名称",
+  "sortByDate": "日期",
+  "sortByProgress": "进度"
+}

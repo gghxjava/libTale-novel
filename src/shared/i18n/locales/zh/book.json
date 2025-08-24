@@ -1,0 +1,12 @@
+{
+  "title": "标题",
+  "author": "作者",
+  "fileSize": "文件大小",
+  "uploadTime": "上传时间",
+  "lastRead": "最后阅读",
+  "readingProgress": "阅读进度",
+  "totalPages": "总页数",
+  "currentPage": "当前页",
+  "tags": "标签",
+  "description": "描述"
+}
