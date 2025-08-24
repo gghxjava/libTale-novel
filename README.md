@@ -257,4 +257,5 @@ pnpm electron:build
 ### 通过cnpm下载Electron
 
 npm install -g cnpm --registry=https://registry.npmmirror.com
-cnpm install -D electron
+cnpm install electron@28.3.3 --save-dev
+
