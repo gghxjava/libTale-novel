@@ -47,29 +47,6 @@ export const themes: Theme[] = [
       mono: 'JetBrains Mono, monospace',
     },
   },
-  {
-    id: 'cupcake',
-    name: '护眼主题',
-    mode: 'cupcake',
-    colors: {
-      primary: '#8B4513',
-      secondary: '#A0522D',
-      background: '#FDF8F3',
-      surface: '#F5F1EB',
-      text: '#2C1810',
-      textSecondary: '#5D4037',
-      border: '#D7CCC8',
-      accent: '#795548',
-      error: '#D32F2F',
-      success: '#388E3C',
-      warning: '#F57C00',
-    },
-    fonts: {
-      body: 'Noto Sans SC, system-ui, sans-serif',
-      heading: 'Noto Sans SC, system-ui, sans-serif',
-      mono: 'JetBrains Mono, monospace',
-    },
-  },
 ];
 
 export const getThemeById = (id: string): Theme => {

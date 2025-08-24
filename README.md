@@ -253,3 +253,8 @@ pnpm electron:build
 - `pnpm electron:build` - 构建生产版本
 - `pnpm lint` - 代码检查
 - `pnpm format` - 代码格式化
+
+### 通过cnpm下载Electron
+
+npm install -g cnpm --registry=https://registry.npmmirror.com
+cnpm install -D electron
