@@ -17,7 +17,7 @@ export const ThemeSwitcher = () => {
         return <SunIcon className="w-4 h-4" />;
       case 'dark':
         return <MoonIcon className="w-4 h-4" />;
-      case 'sepia':
+      case 'cupcake':
         return <EyeIcon className="w-4 h-4" />;
       default:
         return <SwatchIcon className="w-4 h-4" />;

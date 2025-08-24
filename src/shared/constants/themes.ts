@@ -48,9 +48,9 @@ export const themes: Theme[] = [
     },
   },
   {
-    id: 'sepia',
+    id: 'cupcake',
     name: '护眼主题',
-    mode: 'sepia',
+    mode: 'cupcake',
     colors: {
       primary: '#8B4513',
       secondary: '#A0522D',
