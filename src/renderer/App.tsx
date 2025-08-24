@@ -2,11 +2,15 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { LanguageSwitcher } from './components/ui/LanguageSwitcher';
 import { ThemeSwitcher } from './components/ui/ThemeSwitcher';
+import { DaisyUITest } from './components/ui/DaisyUITest';
+import { ThemeDebug } from './components/ui/ThemeDebug';
+import { SimpleThemeTest } from './components/ui/SimpleThemeTest';
 import { useTheme } from './hooks/useTheme';
 import '../shared/i18n';
 
 function App() {
   const [count, setCount] = useState(0);
+  const [showTest, setShowTest] = useState(false);
   const { t, i18n } = useTranslation();
   const { currentTheme } = useTheme();
 
@@ -24,55 +28,150 @@ function App() {
   console.log('Test translations:', testTranslations);
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors">
-      <div className="container mx-auto px-4 py-8">
-        {/* 顶部控制栏 */}
-        <div className="flex justify-between items-center mb-6 p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm">
-          <div className="flex items-center space-x-4">
-            <LanguageSwitcher />
-            <ThemeSwitcher />
+    <div className="min-h-screen bg-base-200">
+      {showTest ? (
+        <DaisyUITest onBack={() => setShowTest(false)} />
+      ) : (
+        <div className="container mx-auto px-4 py-8">
+          {/* 顶部控制栏 */}
+          <div className="navbar bg-base-100 rounded-box shadow-lg mb-6">
+            <div className="flex-1">
+              <h1 className="text-xl font-bold text-primary">
+                {t('appName', { ns: 'common' }) || 'LibTale Novel Reader'}
+              </h1>
+            </div>
+            <div className="flex-none">
+              <div className="flex items-center space-x-4">
+                <LanguageSwitcher />
+                <ThemeSwitcher />
+              </div>
+            </div>
           </div>
-          <div className="text-sm text-gray-500 dark:text-gray-400">
-            当前主题123: {currentTheme.name}
+
+          <div className="text-center mb-8">
+            <h1 className="text-4xl font-bold text-base-content mb-4">
+              {t('appName', { ns: 'common' }) || 'LibTale Novel Reader'}
+            </h1>
+            <p className="text-base-content/70">
+              当前主题: {currentTheme.name}
+            </p>
           </div>
-        </div>
 
-        <h1 className="text-4xl font-bold text-center text-gray-900 dark:text-white mb-8">
-          {t('appName', { ns: 'common' }) || 'LibTale Novel Reader'}
-        </h1>
+          <div className="max-w-md mx-auto">
+            <div className="card bg-base-100 shadow-xl">
+              <div className="card-body items-center text-center">
+                <button
+                  className="btn btn-primary"
+                  onClick={() => setCount(count => count + 1)}
+                >
+                  {t('loading', { ns: 'common' }) || 'Loading...'}: {count}
+                </button>
 
-        <div className="max-w-md mx-auto bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 border border-gray-200 dark:border-gray-700">
-          <div className="text-center">
+                <div className="mt-4">
+                  <p className="text-base-content/70">
+                    {t('noBooks', { ns: 'library' }) || 'No books yet'}
+                  </p>
+                  <p className="text-sm mt-2 text-base-content/50">
+                    基于 React + TypeScript + Electron + DaisyUI
+                  </p>
+                </div>
+
+                <div className="mt-6">
+                  <button
+                    className="btn btn-secondary"
+                    onClick={() => console.log('编辑器功能开发中...')}
+                  >
+                    打开小说编辑器
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* 主题预览 */}
+          <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="card bg-base-100 shadow-lg">
+              <div className="card-body">
+                <h3 className="card-title text-base-content">浅色主题</h3>
+                <div className="h-20 bg-base-200 rounded-box"></div>
+              </div>
+            </div>
+            <div className="card bg-base-100 shadow-lg">
+              <div className="card-body">
+                <h3 className="card-title text-base-content">深色主题</h3>
+                <div className="h-20 bg-base-200 rounded-box"></div>
+              </div>
+            </div>
+            <div className="card bg-base-100 shadow-lg">
+              <div className="card-body">
+                <h3 className="card-title text-base-content">护眼主题</h3>
+                <div className="h-20 bg-base-200 rounded-box"></div>
+              </div>
+            </div>
+          </div>
+
+          {/* DaisyUI 组件展示 */}
+          <div className="mt-8">
+            <h2 className="text-2xl font-bold text-center text-base-content mb-6">
+              DaisyUI 组件展示
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              <div className="card bg-base-100 shadow-lg">
+                <div className="card-body">
+                  <h3 className="card-title">按钮样式</h3>
+                  <div className="flex flex-wrap gap-2">
+                    <button className="btn btn-primary">Primary</button>
+                    <button className="btn btn-secondary">Secondary</button>
+                    <button className="btn btn-accent">Accent</button>
+                  </div>
+                </div>
+              </div>
+
+              <div className="card bg-base-100 shadow-lg">
+                <div className="card-body">
+                  <h3 className="card-title">输入框</h3>
+                  <input
+                    type="text"
+                    placeholder="输入内容..."
+                    className="input input-bordered w-full"
+                  />
+                </div>
+              </div>
+
+              <div className="card bg-base-100 shadow-lg">
+                <div className="card-body">
+                  <h3 className="card-title">进度条</h3>
+                  <progress
+                    className="progress progress-primary w-full"
+                    value="70"
+                    max="100"
+                  ></progress>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* 简单主题测试 */}
+          <div className="mt-8">
+            <SimpleThemeTest />
+          </div>
+
+          {/* 调试信息 */}
+          <div className="mt-8">
+            <ThemeDebug />
+          </div>
+
+          {/* 测试按钮 */}
+          <div className="mt-8 text-center">
             <button
-              className="btn-primary"
-              onClick={() => setCount(count => count + 1)}
+              className="btn btn-outline"
+              onClick={() => setShowTest(true)}
             >
-              {t('loading', { ns: 'common' }) || 'Loading...'}: {count}
+              打开 DaisyUI 测试页面
             </button>
           </div>
-
-          <div className="mt-4 text-center text-gray-600 dark:text-gray-400">
-            <p>{t('noBooks', { ns: 'library' }) || 'No books yet'}</p>
-            <p className="text-sm mt-2">基于 React + TypeScript + Electron</p>
-          </div>
         </div>
-
-        {/* 主题预览 */}
-        <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          <div className="card">
-            <h3 className="font-semibold mb-2">浅色主题</h3>
-            <div className="h-20 bg-gray-100 rounded"></div>
-          </div>
-          <div className="card">
-            <h3 className="font-semibold mb-2">深色主题</h3>
-            <div className="h-20 bg-gray-800 rounded"></div>
-          </div>
-          <div className="card">
-            <h3 className="font-semibold mb-2">护眼主题</h3>
-            <div className="h-20 bg-amber-50 rounded"></div>
-          </div>
-        </div>
-      </div>
+      )}
     </div>
   );
 }

@@ -26,12 +26,12 @@ export const ThemeSwitcher = () => {
 
   return (
     <div className="flex items-center space-x-2">
-      <span className="text-sm text-gray-600">{t('settings.theme')}:</span>
+      <span className="text-sm text-base-content">{t('settings.theme')}:</span>
 
       {/* 快速切换按钮 */}
       <button
         onClick={toggleTheme}
-        className="p-2 rounded-md bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 transition-colors"
+        className="btn btn-circle btn-sm btn-ghost"
         title={t('settings.theme')}
       >
         {getThemeIcon(currentTheme.id)}
@@ -41,7 +41,7 @@ export const ThemeSwitcher = () => {
       <select
         value={currentTheme.id}
         onChange={e => setTheme(e.target.value)}
-        className="px-3 py-1 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-800 dark:border-gray-600"
+        className="select select-bordered select-sm w-full max-w-xs"
       >
         {themes.map(theme => (
           <option key={theme.id} value={theme.id}>

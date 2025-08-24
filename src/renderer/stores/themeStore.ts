@@ -51,20 +51,10 @@ export const useThemeStore = create<ThemeState>()(
 
       applyTheme: (theme: Theme) => {
         const root = document.documentElement;
-
-        // 应用颜色变量
-        Object.entries(theme.colors).forEach(([key, value]) => {
-          root.style.setProperty(`--color-${key}`, value);
-        });
-
-        // 应用字体变量
-        Object.entries(theme.fonts).forEach(([key, value]) => {
-          root.style.setProperty(`--font-${key}`, value);
-        });
-
-        // 设置主题模式
-        root.setAttribute('data-theme', theme.mode);
-
+        
+        // 直接设置 DaisyUI 主题
+        root.setAttribute('data-theme', theme.id);
+        
         // 更新 meta theme-color
         const metaThemeColor = document.querySelector(
           'meta[name="theme-color"]'
