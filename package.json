@@ -3,12 +3,11 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "packageManager": "pnpm@10.12.1",
+  "main": "dist-electron/main/index.js",
   "engines": {
     "node": ">=18.0.0",
-    "pnpm": ">=10.0.0"
+    "pnpm": ">=8.0.0"
   },
-  "main": "dist-electron/main/index.js",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -28,6 +27,7 @@
     "daisyui": "^5.0.50",
     "i18next": "^24.1.0",
     "i18next-browser-languagedetector": "^8.0.2",
+    "i18next-http-backend": "^3.0.2",
     "lodash-es": "^4.17.21",
     "pdfjs-dist": "^4.0.379",
     "react": "^19.1.1",
@@ -48,8 +48,8 @@
     "autoprefixer": "^10.4.19",
     "concurrently": "^9.1.0",
     "cross-env": "^7.0.3",
-    "electron": "^28.3.3",
-    "electron-builder": "^24.13.0",
+    "electron": "29.1.4",
+    "electron-builder": "^25.1.6",
     "eslint": "^9.33.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.1.3",
